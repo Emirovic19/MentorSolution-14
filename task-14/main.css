@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --clr-main-bg: hsl(225, 100%, 94%);
+  --clr-btn-bg: hsl(245, 75%, 52%);
+  --clr-subs-bg: hsl(225, 100%, 98%);
+  --clr-head: hsl(223, 47%, 23%);
+  --clr-text: hsl(224, 23%, 55%);
+  --clr-active: hsl(245, 83%, 68%);
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background-color: var(--clr-main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+.pattern {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.wrapper {
+  max-width: 335px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+article {
+  padding: 30px 25px;
+}
+.stage-one img {
+  max-width: 100%;
+}
+.stage-two h1 {
+  margin: 0;
+  font-weight: var(--fw-900);
+  font-size: 23px;
+  color: var(--clr-head);
+  text-align: center;
+}
+.stage-two p {
+  text-align: center;
+  color: var(--clr-text);
+  padding-inline: 10px;
+  line-height: 25px;
+  margin-bottom: 30px;
+  font-weight: var(--fw-500);
+}
+.three__container {
+  background-color: var(--clr-subs-bg);
+  border-radius: 10px;
+  padding: 15px 20px 10px 20px;
+  margin-bottom: 30px;
+}
+.three__container p {
+  line-height: 23px;
+  color: var(--clr-text);
+  display: inline-block;
+  position: relative;
+  top: -5px;
+  margin: 0;
+  margin-left: 15px;
+  font-size: 14px;
+}
+.three__container a {
+  font-weight: var(--fw-700);
+  position: relative;
+  left: 25px;
+  top: -18px;
+  font-size: 14px;
+}
+.three__container a:active {
+    color: var(--clr-active);
+    text-decoration: none;
+}
+.three__container span {
+  color: var(--clr-head);
+  font-weight: var(--fw-900);
+}
+.stage-three button {
+  border: none;
+  background-color: var(--clr-btn-bg);
+  color: #fff;
+  padding-block: 15px;
+  font-weight: var(--fw-700);
+  font-size: 14px;
+  letter-spacing: 1px;
+  width: 100%;
+  font-family: "Red Hat Display", sans-serif;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0px hsla(245, 75%, 52%, 0.306);
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.stage-three button:active {
+    background-color: var(--clr-active);
+}
+.stage-three .cancel-btn {
+  text-decoration: none;
+  color: var(--clr-text);
+  font-weight: var(--fw-900);
+  font-size: 14px;
+  text-align: center;
+  display: block;
+}
+.stage-three .cancel-btn:active {
+    color: var(--clr-head);
+}
+@media only screen and (min-width: 375px) {
+    .pattern {
+        content: url("pattern-background-desktop.svg")
+    }
+}
